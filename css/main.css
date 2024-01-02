@@ -1,0 +1,391 @@
+.article-div {
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --main-color: lightpink;
+    --main-2-color: #ffffff;
+    --color-dark: #1d2231;
+    --text-gray: darkslategray;
+    --body-bg: #f1f5f9;
+    
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-2-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+#sidebar-toggle {
+    display: none;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #996699;
+    color: #ffffff;
+    overflow-y: auto;
+    transition: width 500ms;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0rem 1rem;
+}
+
+.sidebar-menu {
+    padding: 1rem;
+    
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1.7rem;
+    padding: 12px;
+    align-items: center;
+
+}
+
+.sidebar-menu li a {
+
+    display: block;
+    padding: 12px;
+
+}
+
+
+
+
+.sidebar a span:last-child {
+    padding-left: 0.6rem;
+}
+
+#sidebar-toggle:checked~.sidebar {
+    width: 60px;
+
+
+}
+
+#sidebar-toggle:checked~.sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked~.sidebar li span:last-child {
+    display: none;
+
+}
+
+#sidebar-toggle:checked~.sidebar .sidebar-header,
+#sidebar-toggle:checked~.sidebar li {
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar-toggle:checked~.main-content {
+    margin-left: 60px;
+}
+
+#sidebar-toggle:checked~.main-content header {
+    left: 60px;
+    width: calc(100% - 60px);
+}
+
+
+/* Sign-Out Part */
+.sign-out {
+    position: fixed;
+    bottom: 5px;
+    left: 25px;
+    display: block;
+    background-color: #ffffff;
+    margin: 350px auto 0 auto;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.sidebar-toggle:checked~.sign-out li {
+    display: none;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+}
+
+
+/* Sign-Out Part */
+.sign-out {
+    position: fixed;
+    bottom: 5px;
+    left: 25px;
+    display: block;
+    background-color: #ffffff;
+    margin: 350px auto 0 auto;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+
+.sidebar-toggle:checked~.sign-out li {
+    display: none;
+}
+
+.sidebar-menu ul li a {
+    text-decoration: none;
+}
+
+/* Sign-Out Part */
+
+.main-content {
+    position: relative;
+    margin-left: 240px;
+    transition: margin-left 500ms;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 240px;
+    z-index: 100;
+    width: calc(100% - 240px);
+    background: #996699;
+    height: 60px;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #996699;
+    transition: 500ms;
+}
+
+.search-wrapper {
+    margin-right: 1px;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+.search-wrapper input {
+    border: 0;
+    background-color: #ffffff;
+    outline: 0;
+    padding: 1rem;
+    height: 38px;
+}
+
+#searchtext {
+    color: black;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons span,
+.social-icons div {
+    margin-left: 1.2rem;
+}
+
+.social-icons div {
+    height: 38px;
+    width: 38px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+
+main {
+    margin-top: 60px;
+    background-color: var(--main-2-color);
+    min-height: 90vh;
+    padding: 1rem 3rem;
+}
+
+.dash-title {
+    font-size: 50px;
+    font-family: 'Dancing Script';
+    color: #996699;
+    margin-bottom: 1rem;
+}
+
+.dash-cards {
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+}
+
+.card-single {
+    width: 350px;
+    background-color: #cc99cc;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 10px 6px -6px var(--text-gray);
+    -moz-box-shadow: 0 10px 6px -6px var(--text-gray);
+    box-shadow: 0 10px 6px -6px var(--text-gray);
+}
+
+.card-body {
+    width: 350px;
+    padding: 1.3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-body span {
+    font-size: 1.5rem;
+    color: darkslategray;
+    padding-right: 1.4rem;
+}
+
+.card-body h5 {
+    color: white;
+    font-size: 1rem;
+}
+
+
+.recent {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.activity-grid {
+    display: inline;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-card {
+    background-color: #cc99cc;
+    border-radius: 7px;
+}
+
+.activity-card h5 {
+    color: darkslategray;
+    margin: 1rem;
+}
+
+.activity-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-card thead {
+    background: #efefef;
+    text-align: left;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+/*Formlar*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-group button {
+    background-color: darkslategray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 3px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+
+table{
+    width: 100%;
+    border-style: solid;
+    border-width: 8px;
+    border-collapse: collapse;
+    border-color: white;
+    
+}
+tr{
+    border-width: 3px;
+    border-color: black;
+    border-collapse: collapse;
+}
+th{
+    border-collapse: collapse;
+    border-width: 3px;
+    color: white;
+    font-size: 20px;
+    font-family: italic;
+    
+}
+td{
+    border-collapse: collapse;
+    border-width: 3px;
+
+    
+    
+    
+}
+
